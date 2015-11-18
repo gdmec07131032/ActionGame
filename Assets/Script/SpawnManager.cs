@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour {
 
     public List<GameObject> enemyList = new List<GameObject>();
 
+    public AudioClip vectoryClip;
     void Awake()
     {
         _instance = this;
@@ -61,6 +62,11 @@ public class SpawnManager : MonoBehaviour {
             enemyList.Add(s.Spawn());
         }
 
-
+        while (enemyList.Count > 0)
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+        //游戏胜利
+        AudioSource.PlayClipAtPoint(vectoryClip, transform.position, 1f);
     }
 }

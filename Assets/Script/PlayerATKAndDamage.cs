@@ -8,10 +8,13 @@ public class PlayerATKAndDamage : ATKAndDamage {
     public float attackRange = 100;
     public float attackGun = 100;
     public WeaponGun gun;
+    public AudioClip gunClip;
+    public AudioClip swingClip;
 
 
     public void AttackA()
     {
+        AudioSource.PlayClipAtPoint(swingClip, transform.position, 1f);
         GameObject enemy = null;
         float distance = attackDistance;
         foreach (GameObject go in SpawnManager._instance.enemyList)
@@ -33,6 +36,7 @@ public class PlayerATKAndDamage : ATKAndDamage {
     }
     public void AttackB()
     {
+        AudioSource.PlayClipAtPoint(swingClip, transform.position, 1f);
         GameObject enemy = null;
         float distance = attackDistance;
         foreach (GameObject go in SpawnManager._instance.enemyList)
@@ -54,6 +58,7 @@ public class PlayerATKAndDamage : ATKAndDamage {
     }
     public void AttackRange()
     {
+        AudioSource.PlayClipAtPoint(swingClip, transform.position, 1f);
         List<GameObject> enemyList = new List<GameObject>();
         foreach (GameObject go in SpawnManager._instance.enemyList)
         {
@@ -73,6 +78,7 @@ public class PlayerATKAndDamage : ATKAndDamage {
     public void AttackGun()
     {
         gun.Shoot();
+        AudioSource.PlayClipAtPoint(gunClip, transform.position, 1f);
         gun.attack = attackGun;
     }
 }

@@ -7,6 +7,7 @@ public class ATKAndDamage : MonoBehaviour {
     public float normalAttack = 50;
     public float attackDistance = 1;
     protected Animator animator;
+    public AudioClip deathClip;
 
     protected void Awake()
     {
@@ -31,6 +32,7 @@ public class ATKAndDamage : MonoBehaviour {
         {
 
             animator.SetBool("Dead", true);
+            AudioSource.PlayClipAtPoint(deathClip, transform.position, 1f);
             if (this.tag == Tags.soulMonster||this.tag==Tags.soulBoss)
             {
                 SpawnManager._instance.enemyList.Remove(this.gameObject);
@@ -47,6 +49,7 @@ public class ATKAndDamage : MonoBehaviour {
         {
             GameObject.Instantiate(Resources.Load("HitMonster"), transform.position + Vector3.up, transform.rotation);
         }
+        
     }
 
     void SpawnAward()

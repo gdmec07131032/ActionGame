@@ -12,6 +12,7 @@ public class AwardItem : MonoBehaviour {
     public float speed = 8;
     private bool startMove = false;
     private Transform player;
+    public AudioClip awardClip;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class AwardItem : MonoBehaviour {
             {
                 player.GetComponent<PlayerAward>().GetAward(type);
                 Destroy(this.gameObject);
+                AudioSource.PlayClipAtPoint(awardClip, transform.position, 1f);
             }
         }
     }

@@ -4,6 +4,7 @@ using System.Collections;
 public class SoulBossATKAndDamage : ATKAndDamage {
 
     private Transform player;
+    public AudioClip attackClip;
 
     void Awake()
     {
@@ -13,6 +14,7 @@ public class SoulBossATKAndDamage : ATKAndDamage {
 
     public void Attack1()
     {
+        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
         if (Vector3.Distance(transform.position, player.position) < attackDistance)
         {
             player.GetComponent<ATKAndDamage>().TakeDamage(normalAttack);
@@ -20,6 +22,7 @@ public class SoulBossATKAndDamage : ATKAndDamage {
     }
     public void Attack2()
     {
+        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
         if (Vector3.Distance(transform.position, player.position) < attackDistance)
         {
             player.GetComponent<ATKAndDamage>().TakeDamage(normalAttack);
