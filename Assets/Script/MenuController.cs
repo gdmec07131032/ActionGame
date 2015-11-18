@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class MenuController : MonoBehaviour {
+    public static MenuController _instance;
     public Color purple;
     public SkinnedMeshRenderer headRenderer;
     public Mesh[] headMeshArray;
@@ -13,8 +14,14 @@ public class MenuController : MonoBehaviour {
 
     public SkinnedMeshRenderer[] bodyArray;
 
-    private Color[] colorArray;
+    [HideInInspector]
+    public Color[] colorArray;
     private int colorIndex = -1;
+
+    void Awake()
+    {
+        _instance = this;
+    }
 
     void Start()
     {

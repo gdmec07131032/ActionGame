@@ -54,7 +54,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyIcon.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -189,10 +188,15 @@
     <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+    <Compile Include="Assets\PocketRPG Trails\Scripts\Effects\WeaponTrail.cs" />
+    <Compile Include="Assets\PocketRPG Trails\Scripts\Entities\BladeMaster.cs" />
+    <Compile Include="Assets\PocketRPG Trails\Scripts\Utility\AnimationController.cs" />
     <Compile Include="Assets\Script\ATKAndDamage.cs" />
     <Compile Include="Assets\Script\AutoDestroy.cs" />
     <Compile Include="Assets\Script\AwardItem.cs" />
+    <Compile Include="Assets\Script\BuildTrail.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\EnemyIcon.cs" />
     <Compile Include="Assets\Script\EnemySpawn.cs" />
     <Compile Include="Assets\Script\FollowPlayer.cs" />
     <Compile Include="Assets\Script\Joystick.cs" />
@@ -201,6 +205,7 @@
     <Compile Include="Assets\Script\PlayerATKAndDamage.cs" />
     <Compile Include="Assets\Script\PlayerAnimationAttack.cs" />
     <Compile Include="Assets\Script\PlayerAward.cs" />
+    <Compile Include="Assets\Script\PlayerDress.cs" />
     <Compile Include="Assets\Script\PlayerIcon.cs" />
     <Compile Include="Assets\Script\PlayerMove.cs" />
     <Compile Include="Assets\Script\SoulBoss.cs" />
